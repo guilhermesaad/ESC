@@ -1,0 +1,63 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000222a310acf0 .scope module, "tb_gand16" "tb_gand16" 2 6;
+ .timescale 0 0;
+v00000222a310b580_0 .var "in_a", 15 0;
+v00000222a310b620_0 .var "in_b", 15 0;
+v00000222a3002760_0 .net "out_y", 15 0, L_00000222a3035a10;  1 drivers
+S_00000222a310b3f0 .scope module, "uut" "gand16" 2 11, 3 4 0, S_00000222a310acf0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "a";
+    .port_info 1 /INPUT 16 "b";
+    .port_info 2 /OUTPUT 16 "y";
+L_00000222a3035a10 .functor AND 16, v00000222a310b580_0, v00000222a310b620_0, C4<1111111111111111>, C4<1111111111111111>;
+v00000222a3002f10_0 .net "a", 15 0, v00000222a310b580_0;  1 drivers
+v00000222a310aa10_0 .net "b", 15 0, v00000222a310b620_0;  1 drivers
+v00000222a310aab0_0 .net "y", 15 0, L_00000222a3035a10;  alias, 1 drivers
+    .scope S_00000222a310acf0;
+T_0 ;
+    %vpi_call 2 14 "$display", "Testbench para AND combinacional 16 bit" {0 0 0};
+    %vpi_call 2 15 "$dumpfile", "signals.vcd" {0 0 0};
+    %vpi_call 2 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000222a310acf0 {0 0 0};
+    %delay 0, 0;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v00000222a310b580_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v00000222a310b620_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v00000222a310b580_0, 0, 16;
+    %pushi/vec4 1, 0, 16;
+    %store/vec4 v00000222a310b620_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 16;
+    %store/vec4 v00000222a310b580_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v00000222a310b620_0, 0, 16;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 16;
+    %store/vec4 v00000222a310b580_0, 0, 16;
+    %pushi/vec4 1, 0, 16;
+    %store/vec4 v00000222a310b620_0, 0, 16;
+    %delay 10, 0;
+    %vpi_call 2 22 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_00000222a310acf0;
+T_1 ;
+    %vpi_call 2 26 "$monitor", "t=%03d: \011a=%d,b=%d,y=%d\012", $time, v00000222a310b580_0, v00000222a310b620_0, v00000222a3002760_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_gand16.v";
+    "./gand16.v";
