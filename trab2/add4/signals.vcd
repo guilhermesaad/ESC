@@ -1,0 +1,653 @@
+$date
+	Fri Aug 16 12:11:18 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_add4 $end
+$var wire 4 ! out_Sum [3:0] $end
+$var wire 1 " out_Cout $end
+$var reg 4 # in_A [3:0] $end
+$var reg 4 $ in_B [3:0] $end
+$var reg 1 % in_Cin $end
+$scope module uut $end
+$var wire 4 & A [3:0] $end
+$var wire 4 ' B [3:0] $end
+$var wire 1 % Cin $end
+$var wire 4 ( Sum [3:0] $end
+$var wire 1 " Cout $end
+$var wire 1 ) C3 $end
+$var wire 1 * C2 $end
+$var wire 1 + C1 $end
+$scope module fa0 $end
+$var wire 1 , a $end
+$var wire 1 - b $end
+$var wire 1 % carry_in $end
+$var wire 1 + carry_out $end
+$var wire 1 . sum $end
+$var wire 1 / s1 $end
+$var wire 1 0 c2 $end
+$var wire 1 1 c1 $end
+$scope module h1 $end
+$var wire 1 , a $end
+$var wire 1 - b $end
+$var wire 1 1 carry_out $end
+$var wire 1 / sum $end
+$upscope $end
+$scope module h2 $end
+$var wire 1 / a $end
+$var wire 1 % b $end
+$var wire 1 0 carry_out $end
+$var wire 1 . sum $end
+$upscope $end
+$upscope $end
+$scope module fa1 $end
+$var wire 1 2 a $end
+$var wire 1 3 b $end
+$var wire 1 + carry_in $end
+$var wire 1 * carry_out $end
+$var wire 1 4 sum $end
+$var wire 1 5 s1 $end
+$var wire 1 6 c2 $end
+$var wire 1 7 c1 $end
+$scope module h1 $end
+$var wire 1 2 a $end
+$var wire 1 3 b $end
+$var wire 1 7 carry_out $end
+$var wire 1 5 sum $end
+$upscope $end
+$scope module h2 $end
+$var wire 1 5 a $end
+$var wire 1 + b $end
+$var wire 1 6 carry_out $end
+$var wire 1 4 sum $end
+$upscope $end
+$upscope $end
+$scope module fa2 $end
+$var wire 1 8 a $end
+$var wire 1 9 b $end
+$var wire 1 * carry_in $end
+$var wire 1 ) carry_out $end
+$var wire 1 : sum $end
+$var wire 1 ; s1 $end
+$var wire 1 < c2 $end
+$var wire 1 = c1 $end
+$scope module h1 $end
+$var wire 1 8 a $end
+$var wire 1 9 b $end
+$var wire 1 = carry_out $end
+$var wire 1 ; sum $end
+$upscope $end
+$scope module h2 $end
+$var wire 1 ; a $end
+$var wire 1 * b $end
+$var wire 1 < carry_out $end
+$var wire 1 : sum $end
+$upscope $end
+$upscope $end
+$scope module fa3 $end
+$var wire 1 > a $end
+$var wire 1 ? b $end
+$var wire 1 ) carry_in $end
+$var wire 1 " carry_out $end
+$var wire 1 @ sum $end
+$var wire 1 A s1 $end
+$var wire 1 B c2 $end
+$var wire 1 C c1 $end
+$scope module h1 $end
+$var wire 1 > a $end
+$var wire 1 ? b $end
+$var wire 1 C carry_out $end
+$var wire 1 A sum $end
+$upscope $end
+$scope module h2 $end
+$var wire 1 A a $end
+$var wire 1 ) b $end
+$var wire 1 B carry_out $end
+$var wire 1 @ sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#10
+b10 !
+b10 (
+14
+1+
+11
+1-
+1,
+b1 $
+b1 '
+b1 #
+b1 &
+#20
+04
+b100 !
+b100 (
+1:
+0+
+1*
+01
+17
+0-
+13
+0,
+12
+b10 $
+b10 '
+b10 #
+b10 &
+#30
+b110 !
+b110 (
+14
+1+
+11
+1-
+1,
+b11 $
+b11 '
+b11 #
+b11 &
+#40
+04
+0:
+b1000 !
+b1000 (
+1@
+0+
+0*
+1)
+01
+07
+1=
+0-
+03
+19
+0,
+02
+18
+b100 $
+b100 '
+b100 #
+b100 &
+#50
+b1010 !
+b1010 (
+14
+1+
+11
+1-
+1,
+b101 $
+b101 '
+b101 #
+b101 &
+#60
+04
+b1100 !
+b1100 (
+1:
+0+
+1*
+01
+17
+0-
+13
+0,
+12
+b110 $
+b110 '
+b110 #
+b110 &
+#70
+b1110 !
+b1110 (
+14
+1+
+11
+1-
+1,
+b111 $
+b111 '
+b111 #
+b111 &
+#80
+04
+0:
+b0 !
+b0 (
+0@
+0+
+0*
+0)
+1"
+01
+07
+0=
+1C
+0-
+03
+09
+1?
+0,
+02
+08
+1>
+b1000 $
+b1000 '
+b1000 #
+b1000 &
+#90
+b10 !
+b10 (
+14
+1+
+11
+1-
+1,
+b1001 $
+b1001 '
+b1001 #
+b1001 &
+#100
+04
+b100 !
+b100 (
+1:
+0+
+1*
+01
+17
+0-
+13
+0,
+12
+b1010 $
+b1010 '
+b1010 #
+b1010 &
+#110
+b110 !
+b110 (
+14
+1+
+11
+1-
+1,
+b1011 $
+b1011 '
+b1011 #
+b1011 &
+#120
+04
+0:
+b1000 !
+b1000 (
+1@
+0+
+0*
+1)
+01
+07
+1=
+0-
+03
+19
+0,
+02
+18
+b1100 $
+b1100 '
+b1100 #
+b1100 &
+#130
+b1010 !
+b1010 (
+14
+1+
+11
+1-
+1,
+b1101 $
+b1101 '
+b1101 #
+b1101 &
+#140
+04
+b1100 !
+b1100 (
+1:
+0+
+1*
+01
+17
+0-
+13
+0,
+12
+b1110 $
+b1110 '
+b1110 #
+b1110 &
+#150
+b1110 !
+b1110 (
+14
+1+
+11
+1-
+1,
+b1111 $
+b1111 '
+b1111 #
+b1111 &
+#160
+04
+0:
+0@
+0+
+0*
+0)
+0"
+01
+07
+0=
+0C
+b1 !
+b1 (
+1.
+0-
+03
+09
+0?
+0,
+02
+08
+0>
+1%
+b0 $
+b0 '
+b0 #
+b0 &
+#170
+b11 !
+b11 (
+14
+1+
+11
+1-
+1,
+b1 $
+b1 '
+b1 #
+b1 &
+#180
+04
+b101 !
+b101 (
+1:
+0+
+1*
+01
+17
+0-
+13
+0,
+12
+b10 $
+b10 '
+b10 #
+b10 &
+#190
+b111 !
+b111 (
+14
+1+
+11
+1-
+1,
+b11 $
+b11 '
+b11 #
+b11 &
+#200
+04
+0:
+b1001 !
+b1001 (
+1@
+0+
+0*
+1)
+01
+07
+1=
+0-
+03
+19
+0,
+02
+18
+b100 $
+b100 '
+b100 #
+b100 &
+#210
+b1011 !
+b1011 (
+14
+1+
+11
+1-
+1,
+b101 $
+b101 '
+b101 #
+b101 &
+#220
+04
+b1101 !
+b1101 (
+1:
+0+
+1*
+01
+17
+0-
+13
+0,
+12
+b110 $
+b110 '
+b110 #
+b110 &
+#230
+b1111 !
+b1111 (
+14
+1+
+11
+1-
+1,
+b111 $
+b111 '
+b111 #
+b111 &
+#240
+04
+0:
+b1 !
+b1 (
+0@
+0+
+0*
+0)
+1"
+01
+07
+0=
+1C
+0-
+03
+09
+1?
+0,
+02
+08
+1>
+b1000 $
+b1000 '
+b1000 #
+b1000 &
+#250
+b11 !
+b11 (
+14
+1+
+11
+1-
+1,
+b1001 $
+b1001 '
+b1001 #
+b1001 &
+#260
+04
+b101 !
+b101 (
+1:
+0+
+1*
+01
+17
+0-
+13
+0,
+12
+b1010 $
+b1010 '
+b1010 #
+b1010 &
+#270
+b111 !
+b111 (
+14
+1+
+11
+1-
+1,
+b1011 $
+b1011 '
+b1011 #
+b1011 &
+#280
+04
+0:
+b1001 !
+b1001 (
+1@
+0+
+0*
+1)
+01
+07
+1=
+0-
+03
+19
+0,
+02
+18
+b1100 $
+b1100 '
+b1100 #
+b1100 &
+#290
+b1011 !
+b1011 (
+14
+1+
+11
+1-
+1,
+b1101 $
+b1101 '
+b1101 #
+b1101 &
+#300
+04
+b1101 !
+b1101 (
+1:
+0+
+1*
+01
+17
+0-
+13
+0,
+12
+b1110 $
+b1110 '
+b1110 #
+b1110 &
+#310
+b1111 !
+b1111 (
+14
+1+
+11
+1-
+1,
+b1111 $
+b1111 '
+b1111 #
+b1111 &
+#320
