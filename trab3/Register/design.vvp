@@ -1,0 +1,128 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000028fd5da78a0 .scope module, "tb_Register" "tb_Register" 2 4;
+ .timescale 0 0;
+v0000028fd5dfc5a0_0 .var "clk", 0 0;
+v0000028fd5dfc500_0 .var "in1", 15 0;
+v0000028fd5dfc6e0_0 .var "load", 0 0;
+v0000028fd5dfc140_0 .net "out", 15 0, v0000028fd5d72ac0_0;  1 drivers
+S_0000028fd5da7a30 .scope module, "uut" "Register" 2 15, 3 4 0, S_0000028fd5da78a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "in1";
+    .port_info 1 /INPUT 1 "load";
+    .port_info 2 /INPUT 1 "clk";
+    .port_info 3 /OUTPUT 16 "out";
+v0000028fd5d72840_0 .net "clk", 0 0, v0000028fd5dfc5a0_0;  1 drivers
+v0000028fd5d728e0_0 .net "in1", 15 0, v0000028fd5dfc500_0;  1 drivers
+v0000028fd5d72980_0 .net "load", 0 0, v0000028fd5dfc6e0_0;  1 drivers
+v0000028fd5d72a20_0 .net "mux_out", 15 0, L_0000028fd5dfba60;  1 drivers
+v0000028fd5d72ac0_0 .var "out", 15 0;
+v0000028fd5d72b60_0 .net "q", 15 0, v0000028fd5da60a0_0;  1 drivers
+v0000028fd5e8b9b0_0 .net "qn", 15 0, v0000028fd5d727a0_0;  1 drivers
+S_0000028fd5da5ce0 .scope module, "aux_mux" "mux16" 3 11, 4 4 0, S_0000028fd5da7a30;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "a";
+    .port_info 1 /INPUT 16 "b";
+    .port_info 2 /INPUT 1 "sel";
+    .port_info 3 /OUTPUT 16 "y";
+v0000028fd5d73190_0 .net "a", 15 0, v0000028fd5da60a0_0;  alias, 1 drivers
+v0000028fd5d72f70_0 .net "b", 15 0, v0000028fd5dfc500_0;  alias, 1 drivers
+v0000028fd5e8ab30_0 .net "sel", 0 0, v0000028fd5dfc6e0_0;  alias, 1 drivers
+v0000028fd5da7bc0_0 .net "y", 15 0, L_0000028fd5dfba60;  alias, 1 drivers
+L_0000028fd5dfba60 .functor MUXZ 16, v0000028fd5da60a0_0, v0000028fd5dfc500_0, v0000028fd5dfc6e0_0, C4<>;
+S_0000028fd5da5e70 .scope module, "dff" "DFF_sem_rst" 3 14, 5 3 0, S_0000028fd5da7a30;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "d";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /OUTPUT 16 "q";
+    .port_info 3 /OUTPUT 16 "qn";
+v0000028fd5da7c60_0 .net "clk", 0 0, v0000028fd5dfc5a0_0;  alias, 1 drivers
+v0000028fd5da6000_0 .net "d", 15 0, L_0000028fd5dfba60;  alias, 1 drivers
+v0000028fd5da60a0_0 .var "q", 15 0;
+v0000028fd5d727a0_0 .var "qn", 15 0;
+E_0000028fd5daf030 .event posedge, v0000028fd5da7c60_0;
+    .scope S_0000028fd5da5e70;
+T_0 ;
+    %wait E_0000028fd5daf030;
+    %load/vec4 v0000028fd5da6000_0;
+    %assign/vec4 v0000028fd5da60a0_0, 0;
+    %load/vec4 v0000028fd5da6000_0;
+    %inv;
+    %assign/vec4 v0000028fd5d727a0_0, 0;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0000028fd5da7a30;
+T_1 ;
+    %wait E_0000028fd5daf030;
+    %load/vec4 v0000028fd5d72b60_0;
+    %assign/vec4 v0000028fd5d72ac0_0, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0000028fd5da78a0;
+T_2 ;
+    %vpi_call 2 24 "$display", "Testando o m\303\263dulo Register" {0 0 0};
+    %vpi_call 2 25 "$dumpfile", "signals.vcd" {0 0 0};
+    %vpi_call 2 26 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000028fd5da78a0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028fd5dfc5a0_0, 0, 1;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0000028fd5dfc500_0, 0, 16;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028fd5dfc6e0_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 16;
+    %store/vec4 v0000028fd5dfc500_0, 0, 16;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028fd5dfc6e0_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028fd5dfc6e0_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 2, 0, 16;
+    %store/vec4 v0000028fd5dfc500_0, 0, 16;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028fd5dfc6e0_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028fd5dfc6e0_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 65535, 0, 16;
+    %store/vec4 v0000028fd5dfc500_0, 0, 16;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000028fd5dfc6e0_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000028fd5dfc6e0_0, 0, 1;
+    %delay 5, 0;
+    %vpi_call 2 42 "$finish" {0 0 0};
+    %end;
+    .thread T_2;
+    .scope S_0000028fd5da78a0;
+T_3 ;
+    %vpi_call 2 47 "$monitor", "Tempo = %0t | clk = %b | load = %b | in1 = %b | out = %b", $time, v0000028fd5dfc5a0_0, v0000028fd5dfc6e0_0, v0000028fd5dfc500_0, v0000028fd5dfc140_0 {0 0 0};
+    %end;
+    .thread T_3;
+    .scope S_0000028fd5da78a0;
+T_4 ;
+    %delay 1, 0;
+    %load/vec4 v0000028fd5dfc5a0_0;
+    %inv;
+    %store/vec4 v0000028fd5dfc5a0_0, 0, 1;
+    %jmp T_4;
+    .thread T_4;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "tb_Register.v";
+    "./Register.v";
+    "./mux16.v";
+    "./DFF_sem_rst.v";

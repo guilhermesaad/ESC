@@ -1,0 +1,141 @@
+$date
+	Sat Aug 24 16:51:30 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_Register $end
+$var wire 16 ! out [15:0] $end
+$var reg 1 " clk $end
+$var reg 16 # in1 [15:0] $end
+$var reg 1 $ load $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 16 % in1 [15:0] $end
+$var wire 1 $ load $end
+$var wire 16 & qn [15:0] $end
+$var wire 16 ' q [15:0] $end
+$var wire 16 ( mux_out [15:0] $end
+$var reg 16 ) out [15:0] $end
+$scope module aux_mux $end
+$var wire 16 * b [15:0] $end
+$var wire 1 $ sel $end
+$var wire 16 + y [15:0] $end
+$var wire 16 , a [15:0] $end
+$upscope $end
+$scope module dff $end
+$var wire 1 " clk $end
+$var wire 16 - d [15:0] $end
+$var reg 16 . q [15:0] $end
+$var reg 16 / qn [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx /
+bx .
+bx -
+bx ,
+bx +
+b0 *
+bx )
+bx (
+bx '
+bx &
+b0 %
+0$
+b0 #
+0"
+bx !
+$end
+#1
+1"
+#2
+b1 (
+b1 +
+b1 -
+0"
+1$
+b1 #
+b1 %
+b1 *
+#3
+b1111111111111110 &
+b1111111111111110 /
+b1 '
+b1 ,
+b1 .
+1"
+#4
+0"
+0$
+#5
+b1 !
+b1 )
+1"
+#6
+0"
+b10 #
+b10 %
+b10 *
+#7
+1"
+#8
+b10 (
+b10 +
+b10 -
+0"
+1$
+#9
+b1111111111111101 &
+b1111111111111101 /
+b10 '
+b10 ,
+b10 .
+1"
+#10
+0"
+0$
+#11
+b10 !
+b10 )
+1"
+#12
+b1111111111111111 (
+b1111111111111111 +
+b1111111111111111 -
+0"
+1$
+b1111111111111111 #
+b1111111111111111 %
+b1111111111111111 *
+#13
+b0 &
+b0 /
+b1111111111111111 '
+b1111111111111111 ,
+b1111111111111111 .
+1"
+#14
+0"
+0$
+#15
+b1111111111111111 !
+b1111111111111111 )
+1"
+#16
+0"
+#17
+1"
+#18
+0"
+#19
+1"

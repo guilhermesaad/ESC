@@ -1,0 +1,105 @@
+$date
+	Sat Aug 24 17:53:43 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_PC $end
+$var wire 16 ! out [15:0] $end
+$var reg 1 " clk $end
+$var reg 16 # in [15:0] $end
+$var reg 1 $ inc $end
+$var reg 1 % load $end
+$var reg 1 & reset $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 16 ' in [15:0] $end
+$var wire 1 $ inc $end
+$var wire 1 % load $end
+$var wire 1 & reset $end
+$var reg 16 ( out [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 (
+b0 '
+1&
+0%
+0$
+b0 #
+0"
+b0 !
+$end
+#5
+1"
+#10
+0"
+0&
+#15
+1"
+#20
+0"
+1%
+b1010010110100101 #
+b1010010110100101 '
+#25
+b1010010110100101 !
+b1010010110100101 (
+1"
+#30
+0"
+0%
+#35
+1"
+#40
+0"
+1$
+#45
+b1010010110100110 !
+b1010010110100110 (
+1"
+#50
+0"
+0$
+#55
+1"
+#60
+b0 !
+b0 (
+0"
+1&
+#65
+1"
+#70
+0"
+0&
+#75
+1"
+#80
+0"
+1%
+b1111111111111111 #
+b1111111111111111 '
+#85
+b1111111111111111 !
+b1111111111111111 (
+1"
+#90
+0"
+1$
+0%
+#95
+b0 !
+b0 (
+1"
+#100
+0"
+0$
